@@ -7,6 +7,6 @@ RUN go get
 RUN go install
 RUN go build
 
-FROM alpine
+FROM alpine:3.15.4
 COPY --from=build /go/src/kube-scan /
 CMD ["/kube-scan"]
