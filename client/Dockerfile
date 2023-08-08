@@ -19,7 +19,7 @@ RUN yarn build --prod && npx pkg . -t node8-alpine-x64 --output app
 # ----------------
 # STEP 2:
 # run with alpine
-FROM alpine:latest
+FROM alpine:3.18.3
 WORKDIR /app
 ENV NODE_ENV=production
 
